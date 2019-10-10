@@ -1,0 +1,98 @@
+body {
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .container {
+      width: 100%;
+      /* display: flex; */
+      /* justify-content: center; */
+  }
+  
+  .music-player {
+      /* display: block; */
+      /* width: 20%; */
+      height: auto;
+      border-radius: 10px;
+      background-color: rgba(45, 52, 54,0.5);
+      margin: 20px;
+      margin-top: 50px;
+      overflow: hidden;
+  }
+  
+  /* Cover Art */
+  .album-cover {
+      max-width:100%;
+      z-index: 1;
+  }
+  
+  /* Control Panel */
+  .control-panel {
+      display: block;
+      padding: 0px 15px 0px 15px;
+      margin-bottom: 10px;
+  }
+  
+  /* Play/Pause Button */
+  #p-btn {
+      display: inline-block;
+      position: absolute;   
+      margin-top: 15px;
+      text-align: center;
+      background-color: #FF5722;
+      color: #ffffff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+      cursor: pointer;
+  }
+  
+  #p-btn:hover {
+      background-color: #e05123;
+  }
+  
+  .play {
+      margin: 0px 0px 0px 5px;
+  }
+  
+  .pause {
+      margin-bottom: 10px;
+  }
+  
+  /* Current Time */
+  .curr-time {
+      display: inline-block;
+      position: relative;
+      text-align: right;
+      vertical-align: top;
+      color: grey;
+      width: 50px;
+      font-size: 12px;
+      margin: 35px 0px 0px 5px;
+  }
+  
+  /* Container for title and artist*/
+  .song-info {
+      display: inline-block;
+      position: relative;
+      margin-top: 15px;
+      margin-left: 75px;
+      color: #ffffff;
+  }
+  
+  .title {
+      font-size: 25px;
+      margin: 0px;
+      font-weight: bold;
+  }
+  
+  .artist {
+      display: inline-block;
+      color: darkgrey;
+      margin: 0px;
+  }
