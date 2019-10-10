@@ -1,0 +1,23 @@
+{
+  "name": "Client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solution-GroupProject/Client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Solution-GroupProject/Client/issues"
+  },
+  "homepage": "https://github.com/Solution-GroupProject/Client#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
