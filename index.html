@@ -21,13 +21,21 @@
         </nav>
         <!--  -->
         <div class="container">
+            <form action="">
+                <input type="file" name="" id="" v-on:change="postFile($event)">
+                <button type="submit" @click.prevent="sendFile()" >submit</button>
+            </form>
+          
             <div v-show="isHome" class="row" style="justify-content: center;">
                 <div v-for="n in 10" :key="index" class="music-player col-5">
           
                     <img class="album-cover" src="https://wp-static.gofundme.com/2018/01/03160720/people-talking-at-event-e1532735505404-2272x1158.jpg">
                 
                     <div class="control-panel">
-                      <div id="p-btn" class="play-btn"><span class="play">&#9654;</span></div>
+                      <audio controls>
+                        <source src="https://storage.googleapis.com/solution.aldinofrizal.xyz/1570716246050NIKI - lowkey (Official Visualizer).mp3" type="audio/ogg">
+                      Your browser does not support the audio element.
+                      </audio>
                       <div class="song-info">
                         <p class="title">Description</p>
                         <p class="artist">Date: 2019/10/19</p>
@@ -37,9 +45,7 @@
                     <a href="#" class="btn btn-light">Comment</a>
                   </div>
                 
-                  <audio id="audio">
-                    <source src="http://sc0rp.free.fr/Musique/Earth%20Wind%20&%20Fire%20-%20Boogie%20Wonderland.mp3" type="audio/mpeg">
-                  </audio>
+                 
                  </div>    
                  <!--  -->
                 </div>
