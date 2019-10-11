@@ -1,0 +1,29 @@
+.bg-color{
+ background-color: rgba(223, 230, 233,0.8);
+ padding: 2vh 8vw; 
+}
+.pics{
+  text-align: center;
+  margin: 20px;
+}
+
+.aqua{
+  background-color: aqua
+}
+
+audio{
+  width: 100%;
+  margin: 20px
+}
+
+textarea{
+  width: 100%;
+  margin: 20px
+}
+
+.comment{
+  display: flex;
+  justify-content:space-between;
+  width: 90%;
+  margin: 0 auto
+}
