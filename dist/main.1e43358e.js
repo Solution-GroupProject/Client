@@ -9148,29 +9148,15 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "audio",
+      { staticStyle: { margin: "0", padding: "0" }, attrs: { controls: "" } },
+      [_c("source", { attrs: { src: _vm.podcast, type: "audio/ogg" } })]
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "audio",
-        { staticStyle: { margin: "0", padding: "0" }, attrs: { controls: "" } },
-        [
-          _c("source", {
-            attrs: {
-              src: "/bazzi.540e310c.mp3",
-              type: "audio/ogg"
-            }
-          })
-        ]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -9203,7 +9189,9 @@ render._withStripped = true
       
       }
     })();
-},{"./../bazzi.mp3":[["bazzi.540e310c.mp3","src/bazzi.mp3"],"src/bazzi.mp3"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/App.vue":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/bazzi.mp3":[function(require,module,exports) {
+module.exports = "/bazzi.540e310c.mp3";
+},{}],"src/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9218,6 +9206,8 @@ var _picture = _interopRequireDefault(require("./components/picture"));
 var _titleDesc = _interopRequireDefault(require("./components/titleDesc"));
 
 var _podcast = _interopRequireDefault(require("./components/podcast"));
+
+var _bazzi = _interopRequireDefault(require("./bazzi.mp3"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9263,7 +9253,7 @@ var _default = {
       pic: 'https://picsum.photos/700/300',
       title: 'Lorem Ipsum',
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      podcast: "./bazzi.mp3"
+      podcast: _bazzi.default
     };
   },
   methods: {
@@ -9379,7 +9369,7 @@ render._withStripped = true
       
       }
     })();
-},{"./components/comment":"src/components/comment.vue","./components/picture":"src/components/picture.vue","./components/titleDesc":"src/components/titleDesc.vue","./components/podcast":"src/components/podcast.vue","_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
+},{"./components/comment":"src/components/comment.vue","./components/picture":"src/components/picture.vue","./components/titleDesc":"src/components/titleDesc.vue","./components/podcast":"src/components/podcast.vue","./bazzi.mp3":"src/bazzi.mp3","_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -9417,7 +9407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65260" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65443" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
