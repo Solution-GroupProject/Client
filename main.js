@@ -53,6 +53,11 @@ let app = new Vue ({
                 
                 console.log(data[0]);
                 this.audioData = data
+                //tambahan untuk tweet share
+                this.audioData.forEach(audio => {
+                    audio.tweet = 'https://twitter.com/intent/tweet?text=hello%20world%20' + audio.locationGcp
+                });
+                //selesai tambahan tweet
                 
             })
             .catch(err=>{
