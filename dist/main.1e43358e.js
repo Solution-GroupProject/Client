@@ -9310,7 +9310,7 @@ exports.default = _default;
     _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-sm-8 mx-auto" },
+        { staticClass: "col-sm-10 mx-auto bg-color" },
         [
           _c("imagePicture", { attrs: { pic: _vm.pic } }),
           _vm._v(" "),
@@ -9417,7 +9417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56597" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

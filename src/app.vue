@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-sm-8 mx-auto">
+      <div class="col-sm-10 mx-auto bg-color">
         <imagePicture :pic="pic">
 
         </imagePicture>
@@ -79,6 +79,10 @@ export default {
 </script>
 
 <style>
+  .bg-color{
+   background-color: rgba(223, 230, 233,0.8);
+   padding: 2vh 8vw; 
+  }
   .pics{
     text-align: center;
     margin: 20px;
@@ -104,8 +108,6 @@ export default {
     width: 90%;
     margin: 0 auto
   }
-
-
 
   
 </style>
