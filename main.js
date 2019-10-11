@@ -29,7 +29,10 @@ let app = new Vue ({
             })
         },
         postFile(event){
+            event.target.files[0].name = 'audio'
             this.someFile = event.target.files[0]
+            
+            console.log(this.someFile.name)
         }
     }
 })
