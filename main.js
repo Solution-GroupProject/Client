@@ -2,12 +2,19 @@ let app = new Vue ({
     el: '#app',
     data: {
         someFile: null,
-        isHome:true
+        isHome:true,
+        isSuccess:false,
+        title:'',
+        description:'',
+        audioData:''
     },
     methods: {
         sendFile(){
             let bodyFromData = new FormData()
             bodyFromData.set('audio', this.someFile)
+            bodyFromData.append('title',this.title)
+            bodyFromData.append('description',this.description)
+            
             axios({
                 method: 'post',
                 url : 'http://localhost:3000/audio',
@@ -22,14 +29,40 @@ let app = new Vue ({
                 }
             })
             .then(response => {
-                console.log(response)
+                this.isSuccess=true
+                
+                this.title=''
+                this.description=''
+                this.readFile()
             })
             .catch(err => {
+                alert('gagal')
                 console.log(err.response)
             })
         },
         postFile(event){
             this.someFile = event.target.files[0]
+        },
+        readFile() {
+            axios({
+                method:'get',
+                url:'http://localhost:3000/audio'
+            })
+            .then(({data})=>{
+                console.log('masuk di sini');
+                
+                console.log(data[0]);
+                this.audioData = data
+                
+            })
+            .catch(err=>{
+              console.log(err);  
+            })
         }
+    },
+    mounted() {
+        this.readFile()
     }
 })
+
+
