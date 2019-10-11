@@ -1,0 +1,25 @@
+.pics{
+  text-align: center;
+  margin: 20px;
+}
+
+.aqua{
+  background-color: aqua
+}
+
+audio{
+  width: 100%;
+  margin: 20px
+}
+
+textarea{
+  width: 100%;
+  margin: 20px
+}
+
+.comment{
+  display: flex;
+  justify-content:space-between;
+  width: 90%;
+  margin: 0 auto
+}
