@@ -31,8 +31,10 @@
         <!-- title and desc -->
         <titleDesc :title="title" :desc="desc"></titleDesc>
         <!-- input comment -->
-        <textarea rows="4" placeholder="Terimakasih sudah berbagi podcast ini" style="padding: 0; margin: 0" v-model="comment"></textarea>
-        <button @click="addComment()"> Comment </button>
+        <form action="">
+          <textarea rows="4" placeholder="Terimakasih sudah berbagi podcast ini" style="padding: 0; margin: 0" v-model="comment" required></textarea>
+          <button @click="addComment()"> Comment </button>
+        </form>
         <hr>
         <div>
           <h5>Comment:</h5>

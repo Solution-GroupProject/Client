@@ -9274,7 +9274,10 @@ var _default = {
 
         _this.$emit('receiveData');
       }).catch(function (err) {
-        alert('gagal');
+        swal('Error', "File is too large", "error");
+
+        _this.$emit('triggerLoading', false);
+
         console.log(err.response);
       });
     },
@@ -9345,7 +9348,7 @@ exports.default = _default;
               }
             ],
             staticClass: "form-controll",
-            attrs: { type: "text", name: "title", id: "title" },
+            attrs: { type: "text", name: "title", id: "title", required: "" },
             domProps: { value: _vm.title },
             on: {
               input: function($event) {
@@ -9371,7 +9374,12 @@ exports.default = _default;
               }
             ],
             staticClass: "form-controll",
-            attrs: { type: "text", name: "caption", id: "caption" },
+            attrs: {
+              type: "text",
+              name: "caption",
+              id: "caption",
+              required: ""
+            },
             domProps: { value: _vm.description },
             on: {
               input: function($event) {
@@ -9860,6 +9868,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -10060,42 +10070,45 @@ exports.default = _default;
                   attrs: { title: _vm.title, desc: _vm.desc }
                 }),
                 _vm._v(" "),
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.comment,
-                      expression: "comment"
-                    }
-                  ],
-                  staticStyle: { padding: "0", margin: "0" },
-                  attrs: {
-                    rows: "4",
-                    placeholder: "Terimakasih sudah berbagi podcast ini"
-                  },
-                  domProps: { value: _vm.comment },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
+                _c("form", { attrs: { action: "" } }, [
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.comment,
+                        expression: "comment"
                       }
-                      _vm.comment = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
+                    ],
+                    staticStyle: { padding: "0", margin: "0" },
+                    attrs: {
+                      rows: "4",
+                      placeholder: "Terimakasih sudah berbagi podcast ini",
+                      required: ""
+                    },
+                    domProps: { value: _vm.comment },
                     on: {
-                      click: function($event) {
-                        return _vm.addComment()
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.comment = $event.target.value
                       }
                     }
-                  },
-                  [_vm._v(" Comment ")]
-                ),
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      on: {
+                        click: function($event) {
+                          return _vm.addComment()
+                        }
+                      }
+                    },
+                    [_vm._v(" Comment ")]
+                  )
+                ]),
                 _vm._v(" "),
                 _c("hr"),
                 _vm._v(" "),
@@ -10273,7 +10286,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

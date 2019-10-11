@@ -10,11 +10,11 @@
       </div>
       <div class="form-group">
         <label for="title">Title</label>
-        <input v-model="title" type="text" name="title" id="title" class="form-controll" />
+        <input v-model="title" type="text" name="title" id="title" class="form-controll" required/>
       </div>
       <div class="form-group">
         <label for="caption">Description</label>
-        <input v-model="description" type="text" name="caption" id="caption" class="form-controll" />
+        <input v-model="description" type="text" name="caption" id="caption" class="form-controll" required/>
       </div>
 
       <div class="form-group file-area">
@@ -79,8 +79,9 @@ export default {
         this.$emit('receiveData')
       })
       .catch(err => {
-          alert('gagal')
-          console.log(err.response)
+        swal('Error', "File is too large", "error");
+        this.$emit('triggerLoading', false)
+        console.log(err.response)
       })
     },
     postFile(event){
