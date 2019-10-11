@@ -1,5 +1,5 @@
 body {
-    background-image: url('bg.jpg');
+    background-image: url('/bg.c5f0adfe.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -212,3 +212,5 @@ body {
     opacity: 1;
     background: rgba(0, 0, 0, 0.8);
   }
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
