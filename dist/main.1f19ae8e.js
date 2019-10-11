@@ -9255,7 +9255,7 @@ var _default = {
       bodyFromData.append('description', this.description);
       axios({
         method: 'post',
-        url: 'http://localhost:3000/audio',
+        url: 'http://solution-server.indraaditya.online/audio',
         data: bodyFromData,
         files: {
           audio: this.someFile
@@ -9904,7 +9904,7 @@ var _default = {
       var comment = this.comment;
       axios({
         method: 'patch',
-        url: 'http://localhost:3000/audio',
+        url: 'http://solution-server.indraaditya.online/audio',
         data: {
           _id: _id,
           comment: comment
@@ -9933,7 +9933,7 @@ var _default = {
 
       axios({
         method: 'get',
-        url: 'http://localhost:3000/audio'
+        url: 'http://solution-server.indraaditya.online/audio'
       }).then(function (_ref2) {
         var audios = _ref2.audios;
         _this2.audios = audios;
@@ -9950,7 +9950,7 @@ var _default = {
       console.log('test');
       axios({
         method: 'get',
-        url: 'http://localhost:3000/audio'
+        url: 'http://solution-server.indraaditya.online/audio'
       }).then(function (_ref3) {
         var data = _ref3.data;
         console.log('masuk di sini'); // console.log(data[0]);
@@ -10286,7 +10286,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63260" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65170" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

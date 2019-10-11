@@ -59,7 +59,7 @@ export default {
       bodyFromData.append('description',this.description)
       axios({
           method: 'post',
-          url : 'http://localhost:3000/audio',
+          url : 'http://solution-server.indraaditya.online/audio',
           data: bodyFromData,
           files: {
               audio: this.someFile

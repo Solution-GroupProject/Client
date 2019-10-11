@@ -96,7 +96,7 @@ export default {
       const comment = this.comment
       axios({
         method: 'patch',
-        url: 'http://localhost:3000/audio',
+        url: 'http://solution-server.indraaditya.online/audio',
         data:{
           _id,
           comment
@@ -124,7 +124,7 @@ export default {
     getData(){
       axios({
         method: 'get',
-        url: 'http://localhost:3000/audio'
+        url: 'http://solution-server.indraaditya.online/audio'
       })
         .then(({audios})=>{
           this.audios = audios;
@@ -141,7 +141,7 @@ export default {
       
         axios({
             method:'get',
-            url:'http://localhost:3000/audio'
+            url:'http://solution-server.indraaditya.online/audio'
         })
         .then(({data})=>{
           console.log('masuk di sini');
